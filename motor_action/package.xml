@@ -1,0 +1,25 @@
+<package>
+  <name>motor_action</name>
+  <version>0.0.1</version>
+  <description>Homing action for motor</description>
+  <maintainer email="dawid.seredynski@gmail.com">Dawid Seredynski</maintainer>
+
+  <license>BSD</license>
+
+  <author>Dawid Seredynski</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>rtt</build_depend>
+  <build_depend>ocl</build_depend>
+  <build_depend>rtt_ros</build_depend>
+  <build_depend>rtt_rosclock</build_depend>
+  <build_depend>rtt_actionlib</build_depend>
+  <build_depend>motor_action_msgs</build_depend>
+
+  <run_depend>rtt</run_depend>
+  <run_depend>ocl</run_depend>
+  <run_depend>rtt_ros</run_depend>
+  <run_depend>motor_action_msgs</run_depend>
+
+</package>
