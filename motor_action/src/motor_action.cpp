@@ -50,6 +50,8 @@
 
 #include "Eigen/Dense"
 
+using namespace RTT;
+
 class MotorActionServer : public RTT::TaskContext {
 private:
 	typedef actionlib::ServerGoalHandle<motor_action_msgs::MotorAction> GoalHandle;
@@ -115,7 +117,7 @@ public:
             if (prev_homing_required_in != homing_required_in_ ||
                     prev_homing_in_progress_in != homing_in_progress_in_ ||
                     prev_enabled_in != enabled_in_) {
-                std::cout << getName() << " en: " << (enabled_in_?"t":"f") << ", h.req.: " << (homing_required_in_?"t":"f") << ", h.in progr.: " << (homing_in_progress_in_?"t":"f") << std::endl;
+                Logger::log() << Logger::Info << getName() << " en: " << (enabled_in_?"t":"f") << ", h.req.: " << (homing_required_in_?"t":"f") << ", h.in progr.: " << (homing_in_progress_in_?"t":"f") << Logger::endl;
             }
 
             if ((rtt_rosclock::host_now()-action_start_time_).toSec() > 0.5 &&
