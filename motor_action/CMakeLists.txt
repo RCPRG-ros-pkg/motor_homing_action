@@ -4,9 +4,6 @@ project(motor_action)
 
 find_package(catkin REQUIRED COMPONENTS rtt_ros cmake_modules motor_action_msgs)
 
-find_package(OROCOS-RTT REQUIRED COMPONENTS rtt-scripting rtt-transport-corba)
-include(${OROCOS-RTT_USE_FILE_PATH}/UseOROCOS-RTT.cmake )
-
 find_package(orocos_kdl REQUIRED)
 find_package(Eigen3 REQUIRED)
 find_package(Boost COMPONENTS thread REQUIRED)
@@ -25,7 +22,6 @@ include_directories(#include
 orocos_use_package( ocl-taskbrowser )
 orocos_use_package( ocl-deployment )
 orocos_use_package( ocl-logging )
-orocos_use_package( orocos-rtt-corba )
 orocos_use_package( rtt-typekit )
 
 ## Default component
